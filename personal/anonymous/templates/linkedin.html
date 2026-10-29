@@ -1,0 +1,58 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LinkedIn</title>
+
+    <!-- <link rel="stylesheet" href="{%static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/linkedin.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/linkedin.js' %}" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/contact/">CONTACT</a></li>
+            <li><a href="/projects/">PROJECTS</a></li>
+            <li><a href="/linkedin/" class="active">LINKEDIN</a></li>
+            <li><a href="/leetcode/">LEETCODE</a></li>
+            <li><a href="/certificate/">CERTIFICATE</a></li>
+            <li><a href="/help/">HELP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="linkedin-container">
+
+        <h1>LinkedIn</h1>
+
+        <section class="linkedin-card">
+
+            <h2>linkedIn.com/in/sunil-muduli-078327370</h2>
+
+            <p>
+                Work history, recommendations and professional updates.
+            </p>
+
+            <a
+                href="https://www.linkedin.com/in/sunil-muduli-078327370/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="linkedin-button"
+                id="linkedinButton">
+                Open LinkedIn profile
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+</html>

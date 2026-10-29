@@ -1,0 +1,119 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificate</title>
+    <link rel="stylesheet" href="{% static 'css/certificate.css' %}">
+    <script src="{% static 'js/certificate.js' %}" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/projects/">PROJECTS</a></li>
+        <li><a href="/linkedin/">LINKEDIN</a></li>
+        <li><a href="/leetcode/">LEETCODE</a></li>
+        <li><a href="/certificate/" class="active">CERTIFICATE</a></li>
+        <li><a href="/help/">HELP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="certificate-container">
+
+        <header class="page-header">
+            <h1>Certificates</h1>
+            <p>Courses and credentials.</p>
+
+            <button type="button" id="addButton" class="add-button">
+                + Add certificate
+            </button>
+        </header>
+
+        <!-- Add Certificate Form -->
+        <section id="certificateFormSection"
+                 class="form-card"
+                 {% if not certificate_form.errors %}hidden{% endif %}>
+
+            <form method="POST">
+                {% csrf_token %}
+
+                <div class="form-group">
+                    <label for="{{ certificate_form.name.id_for_label }}">
+                        Certificate name
+                    </label>
+                    {{ certificate_form.name }}
+                    {{ certificate_form.name.errors }}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ certificate_form.issuing_organization.id_for_label }}">
+                        Issuing organization
+                    </label>
+                    {{ certificate_form.issuing_organization }}
+                    {{ certificate_form.issuing_organization.errors }}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ certificate_form.issue_date.id_for_label }}">
+                        Issue date
+                    </label>
+                    {{ certificate_form.issue_date }}
+                    {{ certificate_form.issue_date.errors }}
+                </div>
+
+                <div class="form-group">
+                    <label for="{{ certificate_form.credential_id.id_for_label }}">
+                        Credential ID (optional)
+                    </label>
+                    {{ certificate_form.credential_id }}
+                    {{ certificate_form.credential_id.errors }}
+                </div>
+
+                <div class="form-buttons">
+                    <button type="submit" class="save-button">
+                        Save certificate
+                    </button>
+
+                    <button type="button" id="cancelButton"
+                            class="cancel-button">
+                        Cancel
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Certificate List -->
+        <section class="certificate-list">
+
+            {% for certificate in certificates %}
+                <article class="certificate-card">
+                    <div class="certificate-details">
+                        <h2>{{ certificate.name }}</h2>
+
+                        <p>
+                            {{ certificate.issuing_organization }}
+                            · {{ certificate.issue_date|date:"Y" }}
+                        </p>
+
+                        {% if certificate.credential_id %}
+                            <p class="credential-id">
+                                Credential ID: {{ certificate.credential_id }}
+                            </p>
+                        {% endif %}
+                    </div>
+                </article>
+            {% empty %}
+                <p class="empty-message">
+                    No certificates yet. Click "+ Add certificate" to add your first one.
+                </p>
+            {% endfor %}
+
+        </section>
+    </main>
+    
+  </body>
+</html>

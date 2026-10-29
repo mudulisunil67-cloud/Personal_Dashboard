@@ -1,0 +1,49 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #102b50;
+}
+
+/* Navigation bar */
+nav {
+    width: 100%;
+    padding: 20px 25px;
+    background-color: black;
+    overflow-x: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 45px;
+    min-width: max-content;
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: rgb(245, 92, 16);
+}
+
+nav ul li a.active {
+    background-color: greenyellow;
+    color: black;
+}

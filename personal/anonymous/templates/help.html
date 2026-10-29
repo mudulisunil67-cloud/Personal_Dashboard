@@ -1,0 +1,78 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help</title>
+    <link rel="stylesheet" href="{% static 'css/help.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/help.js' %}" defer></script>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/projects/">PROJECTS</a></li>
+        <li><a href="/linkedin/">LINKEDIN</a></li>
+        <li><a href="/leetcode/">LEETCODE</a></li>
+        <li><a href="/certificate/">CERTIFICATE</a></li>
+        <li><a href="/help/" class="active">HELP</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="help-container">
+
+        <header class="page-header">
+            <h1>Help</h1>
+            <p>Quick answers.</p>
+        </header>
+
+        <!-- FAQ Cards -->
+        <section class="faq-list">
+
+            <details class="faq-card">
+                <summary>How do I get in touch?</summary>
+                <p>
+                    Open the Contact page, fill in the form and send it.
+                </p>
+            </details>
+
+            <details class="faq-card">
+                <summary>Where can I see your work?</summary>
+                <p>
+                    The Projects page lists my projects with links to the
+                    code and live demos.
+                </p>
+            </details>
+
+            <details class="faq-card">
+                <summary>Where are my certificates?</summary>
+                <p>
+                    The Certificate page lists them with a link to each credential.
+                </p>
+            </details>
+
+            <details class="faq-card">
+                <summary>The menu does not fit on my phone.</summary>
+                <p>
+                    Swipe the black bar sideways to see every page.
+                </p>
+            </details>
+
+        </section>
+
+        <!-- Contact Link -->
+        <div class="help-footer">
+            <p>
+                Still stuck?
+                <a href="/contact/">Send me a message.</a>
+            </p>
+        </div>
+
+    </main>
+    
+  </body>
+</html>

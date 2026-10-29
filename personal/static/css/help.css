@@ -1,0 +1,152 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    color: #102b50;
+}
+
+/* Navigation bar */
+nav {
+    width: 100%;
+    padding: 20px 25px;
+    background-color: black;
+    overflow-x: auto;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 45px;
+    min-width: max-content;
+    list-style: none;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 8px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 25px;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    background-color: rgb(245, 92, 16);
+}
+
+nav ul li a.active {
+    background-color: greenyellow;
+    color: black;
+}
+
+/* Main section */
+.help-container {
+    width: 100%;
+    max-width: 810px;
+    margin: 55px auto 40px;
+    padding: 0 20px;
+}
+
+/* Page heading */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.page-header h1 {
+    margin-bottom: 15px;
+    font-size: 32px;
+    color: #102b50;
+}
+
+.page-header p {
+    font-size: 14px;
+    color: #64748b;
+}
+
+/* FAQ cards */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.faq-card {
+    padding: 18px 21px;
+    background: white;
+    border: 1px solid #d5dce7;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+}
+
+.faq-card summary {
+    color: #102b50;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-card p {
+    margin-top: 20px;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Footer message */
+.help-footer {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.help-footer p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.help-footer a {
+    color: #0657ee;
+    text-decoration: underline;
+}
+
+.help-footer a:hover {
+    color: #174bc7;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    nav {
+        padding: 12px;
+    }
+
+    nav ul {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .help-container {
+        margin-top: 35px;
+    }
+
+    .faq-list {
+        gap: 18px;
+    }
+
+    .faq-card {
+        padding: 16px;
+    }
+}

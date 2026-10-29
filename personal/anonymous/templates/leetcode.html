@@ -1,0 +1,56 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LeetCode</title>
+
+    <!-- <link rel="stylesheet" href="{%static 'css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/leetcode.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <script src="{% static 'js/leetcode.js' %}" defer></script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/">HOME</a></li>
+            <li><a href="/contact/">CONTACT</a></li>
+            <li><a href="/projects/">PROJECTS</a></li>
+            <li><a href="/linkedin/">LINKEDIN</a></li>
+            <li><a href="/leetcode/" class="active">LEETCODE</a></li>
+            <li><a href="/certificate/">CERTIFICATE</a></li>
+            <li><a href="/help/">HELP</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="container" id="leetcode">
+        <h1>LeetCode</h1>
+
+        <div class="profile-card">
+            <h2 id="profile-url">leetcode.com/u/Sunil_Muduli/</h2>
+
+            <p>
+                Coding practice, problem-solving skills and
+                algorithm challenges.
+            </p>
+
+            <a
+                id="leetcode-button"
+                class="profile-button"
+                href="https://leetcode.com/u/Sunil_Muduli/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Open LeetCode Profile
+            </a>
+        </div>
+    </main>
+
+</body>
+</html>
